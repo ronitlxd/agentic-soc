@@ -1,0 +1,46 @@
+# Secrets — never commit
+.env
+*.env
+!.env.example
+
+# Runtime SOC state (generated on the host)
+soc/
+demo/
+*.log
+!v2/samples/*.log
+findings_buffer.json
+tickets.json
+tickets/
+ip_stats.json
+event_buffer.json
+investigator_state.json
+investigator_state_v2.json
+intel_cache.json
+log_sizes.json
+v2_log_sizes.json
+v2_known_ips.json
+operator_response.json
+operator_response_v2.json
+cases/
+attack_stix.json
+feeds/
+tor_exit_nodes.txt
+feodo_c2.txt
+
+# Evidence snapshots
+*_snapshot.txt
+SOC-*_snapshot*.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
