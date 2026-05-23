@@ -1,0 +1,21 @@
+[Unit]
+Description=Vega SOC Orchestrator — multi-agent security monitoring
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/.hermes/soc
+ExecStart=/usr/bin/python3 %h/.hermes/skills/soc/orchestrator/orchestrator.py
+Restart=on-failure
+RestartSec=15
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=soc-orchestrator
+
+# Environment
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=%h/.hermes/.env
+
+[Install]
+WantedBy=default.target
