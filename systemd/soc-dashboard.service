@@ -1,0 +1,17 @@
+[Unit]
+Description=Vega SOC Dashboard — live multi-agent web monitor
+After=network.target
+
+[Service]
+Type=simple
+Environment=PYTHONUNBUFFERED=1
+Environment=SOC_DASHBOARD_PORT=9200
+ExecStart=/usr/bin/python3 %h/.hermes/skills/soc/dashboard/soc_dashboard.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=soc-dashboard
+
+[Install]
+WantedBy=default.target
