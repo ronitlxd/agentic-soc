@@ -1,0 +1,16 @@
+{"event_type":"alert","src_ip":"45.137.21.88","dest_ip":"10.0.0.10","dest_port":22,"alert":{"signature":"ET SCAN Potential SSH Scan OUTBOUND","severity":2}}
+{"event_type":"alert","src_ip":"45.137.21.88","dest_ip":"10.0.0.10","dest_port":22,"alert":{"signature":"ET SCAN Nmap Scripting Engine Detected","severity":2}}
+2026-07-30T02:14:01Z server sshd[4401]: Failed password for admin from 45.137.21.88 port 55221 ssh2
+2026-07-30T02:14:03Z server sshd[4402]: Failed password for admin from 45.137.21.88 port 55222 ssh2
+2026-07-30T02:14:05Z server sshd[4403]: Failed password for admin from 45.137.21.88 port 55223 ssh2
+2026-07-30T02:14:07Z server sshd[4404]: Failed password for admin from 45.137.21.88 port 55224 ssh2
+2026-07-30T02:14:09Z server sshd[4405]: Failed password for admin from 45.137.21.88 port 55225 ssh2
+2026-07-30T02:14:11Z server sshd[4406]: Failed password for admin from 45.137.21.88 port 55226 ssh2
+2026-07-30T02:14:13Z server sshd[4407]: Failed password for admin from 45.137.21.88 port 55227 ssh2
+2026-07-30T02:14:20Z server sshd[4408]: Accepted password for admin from 45.137.21.88 port 55230 ssh2
+2026-07-30T02:35:01Z server useradd[5001]: new user: name=backdoor, UID=1050, GID=1050, home=/home/backdoor, shell=/bin/bash
+2026-07-30T02:36:01Z server crontab[5010]: (root) REPLACE (root)
+2026-07-30T02:37:01Z server systemd[1]: Reloading. systemctl enable evilminer.service
+2026-07-30T02:40:01Z server sudo[5090]: admin : COMMAND=/usr/bin/systemctl stop suricata
+2026-07-30T02:40:02Z server systemd[1]: systemctl stop suricata
+2026-07-30T02:41:01Z server bash[5100]: user cleared shell history: history -c
